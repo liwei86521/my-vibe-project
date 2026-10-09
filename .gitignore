@@ -1,0 +1,29 @@
+# Python 虚拟环境
+venv/
+
+# Python 编译缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 环境变量密钥文件
+.env
+
+# FastAPI / uvicorn 日志、临时文件
+*.log
+*.tmp
+
+# 编辑器文件
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# SQLite数据库（可选，如果不想提交数据库文件就保留；想提交测试库就删掉这行）
+# *.sqlite
+# *.db

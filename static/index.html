@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>API 工作台</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="/static/js/app.js" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark">S</span> SIGNAL DESK</div>
+      <span class="top-note">FASTAPI / H5</span>
+    </header>
+
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">LOCAL API PLAYGROUND</p>
+        <h1>接口工作台<span>.</span></h1>
+      </div>
+      <p>发送请求，查看后端返回的数据。</p>
+    </div>
+
+    <section class="workspace" aria-label="接口操作">
+      <article class="panel">
+        <div class="panel-head"><span class="method get">GET</span><code>/api/hello</code></div>
+        <h2>获取问候</h2>
+        <form id="hello-form">
+          <label for="name-input">姓名</label>
+          <input id="name-input" name="name" type="text" placeholder="输入姓名" required />
+          <button type="submit">发送 GET 请求 <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="response-head"><span>返回结果</span><span id="hello-status">等待请求</span></div>
+        <pre id="hello-result" aria-live="polite">// 等待响应</pre>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head"><span class="method post">POST</span><code>/api/submit</code></div>
+        <h2>提交字符串</h2>
+        <form id="submit-form">
+          <label for="message-input">内容</label>
+          <input id="message-input" name="message" type="text" placeholder="输入要提交的内容" required />
+          <button type="submit">发送 POST 请求 <span aria-hidden="true">↗</span></button>
+        </form>
+        <div class="response-head"><span>返回结果</span><span id="submit-status">等待请求</span></div>
+        <pre id="submit-result" aria-live="polite">// 等待响应</pre>
+      </article>
+    </section>
+    <footer>FASTAPI + HTML / CSS / JS</footer>
+  </main>
+</body>
+</html>
